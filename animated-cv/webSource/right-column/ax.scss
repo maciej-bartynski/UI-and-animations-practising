@@ -1,0 +1,211 @@
+#cv {
+    @include flexbox($row, $fstart, stretch);
+    min-height: 100vh;
+    @media only screen and (max-width: 800px){
+        flex-wrap: wrap;
+    }
+    div.section_left-side {
+        @include flexbox($col, $fstart, $center);
+        background-color: $backA;
+        width: 30%;
+        
+        @media only screen and (max-width: 800px){
+            width: 100%;
+            
+        }
+    }
+    div.section_right-side {
+        background-color: $backF;
+        width: 70%;
+        @include flexbox($col, $center, $center);
+        min-width: 880px;
+        @media only screen and (max-width: 800px){
+            width: 100%;
+            min-width: 0;
+        }
+    }
+}
+
+#cv .section_right-side div.ax {
+    @include flexbox($col, $center, $center);
+    width: 100%;
+    @media only screen and (min-width: 992px) {
+        @include flexbox($row, $center, $fstart);
+        width: 90%;
+        margin: 0;
+    }
+    .ax-positioner {
+        width: 90%;
+        @media only screen and (min-width: 992px) {
+            &:nth-of-type(1) {
+                width: 13%;
+            }
+            &:nth-of-type(2) {
+                width: 14%;
+            }
+            &:nth-of-type(3) {
+                width: 15%;
+            }
+            &:nth-of-type(4) {
+                width: 19%;
+            }
+            &:nth-of-type(5) {
+                width: 14%;
+            }
+            &:nth-of-type(6) {
+                width: 12%;
+            }
+            &:nth-of-type(7) {
+                width: 10%;
+            }
+        }
+    }
+}
+
+#cv .ax-positioner {
+    @include flexbox($col, $fstart, $center);
+    div.container {
+        width: 100%;
+        &:nth-of-type(1) {
+            height: 3rem;
+            margin-bottom: 13px;
+            @include flexbox($col, $fend, $fend);
+            padding-right: 1rem;
+        }
+        &:nth-of-type(2) {
+            height: 1rem;
+            @include flexbox($row, $center, $center);
+            position: relative;
+        }
+        &:nth-of-type(3) {
+            margin-top: 13px;
+            @include flexbox($col, $fstart, $fend);
+            padding-right: 1rem;
+        }
+    }
+}
+
+#cv .ax-positioner div.container {
+    &:nth-of-type(1) {
+        span {
+            width: 100%;
+            opacity: 0;
+            color: $bkg;
+            @include textShadow();
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.1rem;
+            font-size: 0.7rem;
+            font-family: sans-serif;
+            word-wrap: break-word;
+            word-break: break-word;
+            text-align: right;
+            &.axAnimation {
+                animation: topAndBottomStringFromRihtToLeft 1s;
+                animation-fill-mode: forwards
+            } 
+        }
+    }
+    &:nth-of-type(2) {
+        div:nth-of-type(1) {
+            width: 100%;
+            height: 5px;
+            background-color: $bkg;
+            @include littleShadow();
+        }
+        div:nth-of-type(2) {
+            width: 26px;
+            height: 26px;
+            border: solid 5px;
+            border-radius: 16px;
+            border-color: $bkg;
+            //background-color: white;
+            position: absolute;
+            top: 50%;
+            opacity: 0;
+            margin-top: -13px;
+            @include littleShadow();
+            &:hover {
+                @include hoverLittleShadow();
+            }
+            &.axPointAnimation {
+                -webkit-animation: axPointFromLeftToRight 1s;
+                -moz-animation: axPointFromLeftToRight 1s;
+                -o-animation: axPointFromLeftToRight 1s;
+                animation: axPointFromLeftToRight 1s;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+    &:nth-of-type(3) {
+        span:nth-of-type(1) {
+            width: 100%;
+            color: $bkg;
+            min-height: 3rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 0.1rem;
+            font-size: 0.7rem;
+            font-family: sans-serif;
+            text-align: right;
+            padding-bottom: 0.5rem;
+            word-wrap: break-word;
+            word-break: break-word;
+            padding-left: 2px;
+            opacity: 0;
+            @include textShadow();
+            &.dateAnim {
+                animation: bottomStringFromHiddenToVisible 1s;
+                animation-fill-mode: forwards;
+            } 
+        }
+        span:nth-of-type(2) {
+            width: 100%;
+            color: $bkg;
+            min-height: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            font-size: 0.7rem;
+            font-family: sans-serif;
+            text-align: right;
+            padding-bottom: 0.5rem;
+            padding-left: 2px;
+            word-wrap: break-word;
+            word-break: break-word;
+            opacity: 0;
+            @include textShadow();
+            &.nameAnim {
+                animation: bottomStringFromHiddenToVisible 1s;
+                animation-fill-mode: forwards;
+                animation-delay: 300ms;
+            }
+        }
+        span:nth-of-type(3) {
+            width: 100%;
+            font-size: 1rem;
+            color: $bkg;
+            text-align: right;
+            padding-bottom: 0.5rem;
+            padding-left: 2px;
+            word-wrap: break-word;
+            word-break: break-word;
+            font-family: sans-serif;
+            @include textShadow();
+            &.descAnim {
+                @media only screen and (max-width: 992px) {
+                    opacity: 0;
+                    animation: bottomStringFromHiddenToVisible 1s;
+                    animation-fill-mode: forwards;
+                    animation-timing-function: ease-out; 
+                }
+            }
+            @media only screen and (min-width: 992px) {
+                display: none;
+                width: 0;
+                height: 0;
+                overflow: hidden;
+                
+            }
+        }
+    }
+}

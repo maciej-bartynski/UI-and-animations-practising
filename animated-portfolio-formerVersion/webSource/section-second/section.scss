@@ -1,0 +1,271 @@
+.this-engine-section {
+  @media only screen and (max-width: 991px) {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+  }
+  @media only screen and (min-width: 992px) {
+    width: 100%;
+    height: 100%;
+  }
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  &.not-for-IE {
+    height: calc(100% + 100px);
+    top: -100px;
+  }
+}
+
+.this-engine-animation {
+  animation: thisEngineSectionAppears;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes thisEngineSectionAppears {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+.controllClass {
+  animation: thisEngineSectionHides;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes thisEngineSectionHides {
+  from {
+    left: 0;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+.this-engine-section {
+  @include sectionRWD();
+  div.engine-section_left-side {
+    @include leftColumnRWD(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    @include flexbox($col, $fstart, $center);
+  }
+  div.engine-section_right-side {
+    @include rightColumnRWD(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    @include flexbox($col, $fstart, $center);
+  }
+}
+.this-engine-section {
+  div.engine-section_left-side {
+    padding-left: 2%;   
+    div {
+      width: 100%;
+      height: 80%;
+      overflow-y: scroll;
+      position: relative;
+      background-color: rgba(0, 102, 255, 0.2);
+      margin-top: 100px;
+      @include flexbox($col, $fstart, $center);
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+      span.classBack {
+        margin: 0.1rem;
+        width: 97%;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 0.1rem 0 0 0;
+        font-family: "Courier New", Courier, monospace;
+        color: $codeD;
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+      div.txt {
+        overflow: auto;
+        @include flexbox($col, $fstart, $fend);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        margin: 0;
+        background: none;
+        span.inTxt {
+          margin: 0.1rem;
+          background-color: none;
+          width: 88%;
+          padding: 0.1rem 0 0 0;
+          font-family: "Courier New", Courier, monospace;
+          color: white;
+          font-weight: bold;
+          font-size: 1.2rem;
+          line-height: 1.5rem;
+          &:nth-of-type(1) {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: $codeC; //font-family: sans-serif;
+          }
+          &:nth-of-type(2) {
+            color: rgb(255, 255, 0);
+            font-weight: bold;
+            font-size: 1.5rem; //font-family: sans-serif;
+          }
+          &:nth-of-type(3) {
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: $codeC; //font-family: sans-serif;
+          }
+        }
+      }
+    }
+  }
+}
+
+.this-engine-section {
+  div.engine-section_right-side {
+    .includedToThis {
+      &:nth-of-type(1) {
+        margin-top: 100px;
+        width: 100%;
+        height: 35%;
+        background-color: $bkg2Op;
+        position: relative;
+        @include flexbox($col, $fstart, $center);
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        overflow-y: scroll;
+        span.classBack {
+          margin: 0.1rem;
+          width: 97%;
+          background-color: rgba(0, 4, 255, 0.1);
+          padding: 0.1rem 0 0 0;
+          font-family: "Courier New", Courier, monospace;
+          color: $codeD;
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+        div.txt {
+          @include flexbox($col, $fstart, $fend);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding-top: 0.3rem;
+          padding-bottom: 0.3rem;
+          margin: 0;
+          background-color: none;
+          span.inTxt {
+            margin: 0.1rem;
+            background-color: none;
+            width: 88%;
+            padding: 0.1rem 0 0 0;
+            font-family: "Courier New", Courier, monospace;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            &:nth-of-type(1) {
+              font-weight: bold;
+              font-size: 1.5rem;
+              color:rgb(0, 255, 0); //font-family: sans-serif;
+            }
+            &:nth-of-type(2) {
+              color:$codeG;
+              font-weight: bold;
+              font-size: 1.5rem; //font-family: sans-serif;
+            }
+            &:nth-of-type(3) {
+              font-weight: bold;
+              font-size: 1.5rem;
+              color: rgb(0, 255, 0); //font-family: sans-serif;
+            }
+          }
+        }
+      }
+      &:nth-of-type(2) {
+        width: 100%;
+        height: 5%;
+        background-color: rgba(255,0,0,0.2);
+      }
+      &:nth-of-type(3) {
+        width: 100%;
+        height: 35%;
+        background-color: rgba(0,255,0,0.5);
+        position: relative; 
+        @include flexbox($col, $fstart, $center);
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        overflow-y: scroll;
+        span.classBack {
+          margin: 0.1rem;
+          width: 97%;
+          background-color: rgba(0, 4, 255, 0.1);
+          padding: 0.1rem 0 0 0;
+          font-family: "Courier New", Courier, monospace;
+          color: $codeD;
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+        div.txt {
+          @include flexbox($col, $fstart, $fend);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          padding-top: 0.3rem;
+          padding-bottom: 0.3rem;
+          margin: 0;
+          background-color: none;
+          span.inTxt {
+            margin: 0.1rem;
+            background-color: none;
+            width: 88%;
+            padding: 0.1rem 0 0 0;
+            font-family: "Courier New", Courier, monospace;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            &:nth-of-type(1) {
+              font-weight: bold;
+              font-size: 1.5rem;
+              color:rgb(255, 255, 0); //font-family: sans-serif;
+            }
+            &:nth-of-type(2) {
+              color:rgb(255, 255, 0);
+              font-weight: bold;
+              font-size: 1.5rem;
+            }
+            &:nth-of-type(3) {
+              font-weight: bold;
+              font-size: 1.5rem;
+              color: rgb(255, 255, 0);
+            }
+            
+            &:nth-of-type(9) {
+                font-weight: bold;
+                font-size: 1.5rem;
+                color: rgb(255, 0, 0); 
+            }
+            &:nth-of-type(11) {
+                font-weight: bold;
+                font-size: 1.5rem;
+                color: rgb(255, 0, 0); 
+            }
+          }
+        }
+      }
+      &:nth-of-type(4){
+        width: 100%;
+        height: 5%;
+        background-color: rgba(255,0,0,0.2);
+      }
+    }
+  }
+}

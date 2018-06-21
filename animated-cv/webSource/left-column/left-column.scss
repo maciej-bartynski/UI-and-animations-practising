@@ -1,0 +1,235 @@
+div.section_left-side {
+    min-width: 470px;
+    #magictext {
+        width: 100%;
+        @include flexbox($col, $fstart, $center);
+        span.spanLine {
+            width: 90%;
+            color: $bkg;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+            word-wrap: break-word;
+            word-break: break-word;
+            padding-top: 0.4rem;
+            padding-bottom: 0.4rem;
+            font-weight: bold;
+            border-bottom: $backB 1px solid;
+            @include flexbox ($row, $fstart, $center);
+            .positionNumber{
+                padding: 0;
+                margin: 0;
+                margin-right: 3rem;
+                color: $backB;
+                @media only screen and (max-width: 800px){
+                    margin-right: 1rem;
+                }
+            }
+            .positionNumber.edge{
+                margin-right: 1rem; 
+            }
+            span.spanColor {
+                padding: 0;
+                margin: 0;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+            }
+            &:nth-of-type(1) {
+                margin-top: 2rem;
+                
+                flex-wrap: nowrap;
+                span.spanColor {
+                    &:nth-of-type(1) {
+                        color: $bkg;
+                    }
+                    &:nth-of-type(2) {
+                        color: white;
+                    }
+                    &:nth-of-type(3) {
+                        color: $bkg;
+                    }
+                }
+            }
+            &:nth-of-type(2) {
+               
+                span.spanColor {
+                    &:nth-of-type(1) {
+                        color: $bkg;
+                    }
+                    &:nth-of-type(2) {
+                        color: $bkg;
+                    }
+                    &:nth-of-type(3) {
+                        color: $backD;
+                    }
+                    &:nth-of-type(4) {
+                        color: $bkg;
+                    }
+                }
+            }
+            &:nth-of-type(3) {
+               
+                span.spanColor {
+                    &:nth-of-type(1) {
+                        color: $bkg;
+                    }
+                    &:nth-of-type(2) {
+                        color: $bkg;
+                    }
+                    &:nth-of-type(3) {
+                        color: $codeC;
+                    }
+                    &:nth-of-type(4) {
+                        color: $bkg;
+                    }
+                }
+            }
+            &:nth-of-type(4) {
+                
+                span.spanColor {
+                    &:nth-of-type(1) {
+                        color: $bkg;
+                    }
+                    &:nth-of-type(2) {
+                        color: $bkg;
+                    }
+                    &:nth-of-type(3) {
+                        color: $codeC;
+                    }
+                    &:nth-of-type(4) {
+                        color: $bkg;
+                    }
+                }
+            }
+            &:nth-of-type(5) {
+                
+                span.spanColor {
+                    &:nth-of-type(1) {
+                        color: $bkg;
+                    }
+                    &:nth-of-type(2) {
+                        color: $bkg;
+                    }
+                    &:nth-of-type(3) {
+                        color: $backD;
+                    }
+                    &:nth-of-type(4) {
+                        color: $bkg;
+                    }
+                    &:nth-of-type(5) {
+                        color: rgb(2, 134, 2);
+                    }
+                    &:nth-of-type(6) {
+                        color: rgb(2, 134, 2);
+                        &.touchThePointerAndAgain {
+                            position: relative;
+                            animation: pointMe 500ms;
+                            animation-iteration-count: infinite;
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(6) {
+                
+                span.spanColor {
+                    &:nth-of-type(1) {
+                        color: $bkg;
+                    }
+                    &:nth-of-type(2) {
+                        color: $bkg;
+                    }
+                    &:nth-of-type(3) {
+                        color: $backD;
+                    }
+                    &:nth-of-type(4) {
+                        color: $bkg;
+                    }
+                    &:nth-of-type(5) {
+                        color: $backE;
+                    }
+                    &:nth-of-type(6) {
+                        color: $backE;
+                        &.touchThePointerAndAgain {
+                            position: relative;
+                            animation: pointMe 500ms;
+                            animation-iteration-count: infinite;
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(7) {
+                
+                span.spanColor {
+                    &:nth-of-type(1) {
+                        color: $bkg;
+                    }
+                    &:nth-of-type(3) {
+                        color: $backD;
+                    }
+                    &:nth-of-type(5) {
+                        color: $backE;
+                    }
+                    &:nth-of-type(6) {
+                        color: $backE;
+                        &.touchThePointerAndAgain {
+                            position: relative;
+                            animation: pointMe 500ms;
+                            animation-iteration-count: infinite;
+                        }
+                    }
+                }
+            }
+            &:nth-of-type(8) {
+                
+                span.spanColor {
+                    &:nth-of-type(1) {
+                        color: $bkg;
+                    }
+                    &:nth-of-type(2) {
+                        color: $bkg;
+                    }
+                    &:nth-of-type(3) {
+                        color: white;
+                    }
+                }
+            }
+            &:nth-of-type(9) {
+                //padding-left: 0;
+                span.spanColor {
+                    &:nth-of-type(1) {
+                        color: $bkg;
+                    }
+                }
+            }
+            &:nth-of-type(10) {
+                //padding-left: 0;
+                span.spanColor {
+                    &:nth-of-type(1) {
+                        color: $bkg;
+                    }
+                    &:nth-of-type(2) {
+                        color: $bkg;
+                    }
+                    &:nth-of-type(3) {
+                        color: rgb(2, 134, 2);
+                    }
+                }
+            }
+            #selfintroA, #selfintroB, #selfintroC, #selfintroD {
+                color: $backH;
+            }
+        }
+    }
+}
+@keyframes pointMe {
+    from {
+        left: 0;
+        color:rgb(2, 134, 2);
+    }
+    50%{
+        left: 10px;
+        color:rgb(255,0,0);
+    }
+    to{
+        left: 0;
+        color:rgb(2, 134, 2);
+    }
+}

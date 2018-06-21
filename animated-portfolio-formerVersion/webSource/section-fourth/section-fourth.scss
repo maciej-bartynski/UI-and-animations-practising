@@ -1,0 +1,128 @@
+#converter-app {
+    @include sectionRWD();
+    min-height: 100vh;
+    div.section_left-side {
+        //min-height: 100vh;
+        @include leftColumnRWD($bkg2, $bkg2);
+        @include flexbox($col, $fstart, $center);
+    }
+    div.section_right-side {
+        min-height: 100vh;
+        padding-top: 100px;
+        @include rightColumnRWD($bkg3, $bkg3);
+        @include flexbox($col, $fstart, $fstart);
+        @media only screen and (max-width: 991px){
+            @include flexbox($col, $fstart, $center);
+        }
+    }
+}
+
+
+#converter-app{
+    .section_right-side{
+        padding: 1rem;
+        .positioner{
+            background-color: #0066ff;
+            padding: 1rem;
+            @include shadow();
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            transition: all 1s;
+            width: 100%;
+            height: 60vh;
+            &.mobilescrn{
+                width: 45%;
+                height: 80vh;
+                @media only screen and (max-width: 991px){
+                    width: 100%;
+                    height: 50vh;
+                }
+            }
+            &.desktopscrn{
+                width: 100%;
+                height: 60vh;
+                @media only screen and (max-width: 991px){
+                    width: 100%;
+                    height: 50vh;
+                }
+            }
+            @media only screen and (max-width: 991px){
+                width: 100%;
+                height: 50vh;
+            }
+        }
+    }
+}
+
+#converterAppFrame{
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 5px;
+    overflow: visible;
+    padding: 1%;
+    background-color: #6b8bf3;
+    -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.75);
+}
+.RWDBtns{
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: #0049b8;
+    @include shadow();
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 1rem 0 1rem 0;
+    transition: all 1s;
+    @include flexbox($col, $center, $center);
+    @media only screen and (min-width: 992px){
+        @include flexbox($row, $center, $center);
+    }
+    &.mobilebtn{
+        @media only screen and (min-width: 992px){
+            width: 45%
+        }
+    }
+    &.desktopbtn{
+        @media only screen and (min-width: 992px){
+            width: 100%;
+        }
+    }
+}
+.iframeBtn{
+    user-select: none;
+    cursor: pointer;
+    margin: 1px;
+    width: 90%;
+    @media only screen and (min-width: 992px){
+        width: 45%;
+        min-width: 200px;
+    }
+    padding: 1rem;
+    background-color: $bkg;
+    border-radius: 3px;
+    @include shadow();
+    @include flexbox($col, $center, $center);
+    span{
+        color: $bkg3;
+        width: 100%;
+        text-align: center;
+        font-family: sans-serif;
+        white-space: nowrap;
+    }
+    &:nth-of-type(2){
+        @media only screen and (max-width: 991px){
+            background-color: gray;
+            pointer-events: none;
+            cursor: auto;
+            .span{
+                color: white;
+            }
+        }
+    }
+}
+
+iframe {
+    overflow-y: scroll;
+}

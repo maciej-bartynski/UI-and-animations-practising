@@ -1,0 +1,109 @@
+.ax-description {
+    width: 0;
+    height: 0;
+    display: none;
+    overflow: hidden;
+    @media only screen and (min-width: 992px) {
+        overflow: visible;
+        @include flexbox($col, $fstart, $center);
+        width: 90%;
+        min-height: 5.5rem;
+        position: relative;
+        div {
+            opacity: 0;
+            &.btnAnimation {
+                animation: btnsFromHiddenToVisible 1s linear;
+                animation-fill-mode: forwards;
+            }
+            @include flexbox($row, $center, $center);
+            width: 100%;
+            position: relative;
+            top: 0;
+            height: 10px;
+            div {
+                cursor: pointer;
+                user-select: none;
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                top: 0;
+                &:nth-of-type(1) {
+                    right: 87%;
+                }
+                &:nth-of-type(2) {
+                    right: 73%;
+                }
+                &:nth-of-type(3) {
+                    right: 58%;
+                }
+                &:nth-of-type(4) {
+                    right: 39%;
+                }
+                &:nth-of-type(5) {
+                    right: 25%;
+                }
+                &:nth-of-type(6) {
+                    right: 13%;
+                }
+                &:nth-of-type(7) {
+                    right: 3%;
+                }
+            }
+        }
+        span {
+            font-size: 1rem;
+            @include textShadow();
+            color: $bkg;
+            text-align: right;
+            padding-right: 10px;
+            padding-top: 1rem;
+            word-wrap: break-word;
+            word-break: break-word;
+            font-family: sans-serif;
+            position: absolute;
+            border-right: solid 1px $bkg;
+            &:nth-of-type(1) {
+                top:1rem;
+                left: 13%;
+                border-right: none;
+                border-left: solid 1px $bkg;
+                padding-left: 10px;
+                padding-right: 0;
+            }
+            &:nth-of-type(2) {
+                top:1rem;
+                right: 73%;
+            }
+            &:nth-of-type(3) {
+                top:1rem;
+                right: 58%;
+            }
+            &:nth-of-type(4) {
+                top:1rem;
+                right: 39%;
+            }
+            &:nth-of-type(5) {
+                top:1rem;
+                right: 25%;
+            }
+            &:nth-of-type(6) {
+                top:1rem;
+                right: 13%;
+            }
+            &:nth-of-type(7) {
+                top:1rem;
+                right: 3%;
+            }
+            &.removeToShowAndRead{
+                display: none;
+                width: 0;
+                height: 0;
+                overflow: hidden; 
+            }
+        }
+    }
+}
+
+.btn-triangle{
+    fill: $bkg;
+}

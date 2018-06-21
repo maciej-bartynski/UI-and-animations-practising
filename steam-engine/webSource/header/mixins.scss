@@ -1,0 +1,78 @@
+@mixin flexbox($dir, $justify, $align) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin shadow() {
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+@mixin noneShadow() {
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+    box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+@mixin hoverShadow() {
+    -webkit-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 7px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+@mixin activeShadow() {
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+@mixin littleShadow() {
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+@mixin hoverLittleShadow() {
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+@mixin hoverActiveShadow() {
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+@mixin sectionRWD($dirCol: column, $justifyCol: flex-start, $alignCol: center, $dirRow: row, $justifyRow: center, $alignRow: stretch) {
+    width: 100%;
+    @include flexbox($dirCol, $justifyCol, $alignCol);
+    @media only screen and (min-width: 992px) {
+        @include flexbox($dirRow, $justifyRow, $alignRow);
+    }
+}
+
+@mixin leftColumnRWD($bcolor, $bcolorb) {
+    background-color: $bcolor;
+    width: 100%;
+    @media only screen and (min-width: 992px) {
+        background-color: $bcolorb;
+        width:20%;
+    }
+}
+
+@mixin rightColumnRWD($bcolor, $bcolorb) {
+    background-color: $bcolor;
+    width: 100%;
+    @media only screen and (min-width: 992px) {
+        background-color: $bcolorb;
+        width:80%;
+    }
+}
+@mixin textShadow(){
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+}

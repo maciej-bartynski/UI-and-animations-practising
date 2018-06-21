@@ -1,0 +1,164 @@
+#cv {
+    div.section_left-side {
+        padding-left: 10%;
+        @include flexbox($col, $fstart, $center);
+        @media only screen and (min-width: 768px){
+            padding-left: 30%;         
+        }
+        @media only screen and (min-width: 992px){
+            padding-left: 2%;         
+        }
+        span.spanLine {
+            width: 100%;
+            color: $bkg;
+            font-family: sans-serif;
+            font-size: 1.5rem;
+            word-wrap: break-word;
+            word-break: break-word;
+            padding-top: 0.4rem;
+            padding-bottom: 0.4rem;
+            font-weight: bold; 
+            span.spanColor {
+                padding: 0;
+                margin: 0;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+            }
+            &:nth-of-type(1) {
+                margin-top: 2rem;
+                padding-left: 0;
+                flex-wrap: nowrap;
+                span.spanColor{
+                    //&:nth-of-type(1) {color: $codeA;}
+                    //&:nth-of-type(2) {color: $codeC;}
+                    //&:nth-of-type(3) {color: $codeB;}
+                    &:nth-of-type(1) {color: $bkg;}
+                    &:nth-of-type(2) {color: $codeC;}
+                    &:nth-of-type(3) {color: $bkg;}
+                }
+            }
+            &:nth-of-type(2) {
+                padding-left: 2rem;
+                @media only screen and (min-width: 992px) {
+                    padding-left: 4rem;   
+                }
+                span.spanColor{
+                    //&:nth-of-type(1) {color: $codeA;}
+                    //&:nth-of-type(2) {color: $codeB;}
+                    //&:nth-of-type(3) {color: rgb(110, 0, 212);}
+                    //&:nth-of-type(4) {color: $codeB;}
+
+                    &:nth-of-type(1) {color: $bkg;}
+                    &:nth-of-type(2) {color: $bkg;}
+                    &:nth-of-type(3) {color: rgb(110, 0, 212);}
+                    &:nth-of-type(4) {color: $bkg;}
+                }
+            }
+            &:nth-of-type(3) {
+                padding-left: 2rem;
+                @media only screen and (min-width: 992px) {
+                    padding-left: 4rem;   
+                }
+                span.spanColor{
+                    //&:nth-of-type(1) {color: $codeA;}
+                    //&:nth-of-type(2) {color: $codeB;}
+                    //&:nth-of-type(3) {color: $codeC;}
+                    //&:nth-of-type(4) {color: $codeB;}
+
+                    &:nth-of-type(1) {color: $bkg;}
+                    &:nth-of-type(2) {color: $bkg;}
+                    &:nth-of-type(3) {color: $codeC;}
+                    &:nth-of-type(4) {color: $bkg;}
+                }
+            }
+            &:nth-of-type(4) {
+                padding-left: 2rem;
+                @media only screen and (min-width: 992px) {
+                    padding-left: 4rem;   
+                }
+                span.spanColor{
+                    //&:nth-of-type(1) {color: $codeA;}
+                    //&:nth-of-type(2) {color: $codeB;}
+                    //&:nth-of-type(3) {color: $codeC;}
+                    //&:nth-of-type(4) {color: $codeB;}
+
+                    &:nth-of-type(1) {color: $bkg;}
+                    &:nth-of-type(2) {color: $bkg;}
+                    &:nth-of-type(3) {color: $codeC;}
+                    &:nth-of-type(4) {color: $bkg;}
+                }
+            }
+            &:nth-of-type(5) {
+                padding-left: 2rem;
+                @media only screen and (min-width: 992px) {
+                    padding-left: 4rem;   
+                }
+                span.spanColor{
+                    //&:nth-of-type(1) {color: $codeA;}
+                    //&:nth-of-type(2) {color: $codeB;}
+                    //&:nth-of-type(3) {color: $codeC;}
+                    //&:nth-of-type(4) {color: $codeB;}
+
+                    &:nth-of-type(1) {color: $bkg;}
+                    &:nth-of-type(2) {color: $bkg;}
+                    &:nth-of-type(3) {color: $codeC;}
+                    &:nth-of-type(4) {color: $bkg;}
+                    &:nth-of-type(5) {color: rgb(2, 134, 2);}
+                }
+            }
+            &:nth-of-type(6) {
+                padding-left: 2rem;
+                @media only screen and (min-width: 992px) {
+                    padding-left: 4rem;   
+                }
+                span.spanColor{
+                    //&:nth-of-type(1) {color: $codeA;}
+                    //&:nth-of-type(2) {color: $codeB;}
+                    //&:nth-of-type(3) {color: $codeC;}
+                    //&:nth-of-type(4) {color: $codeB;}
+
+                    &:nth-of-type(1) {color: $bkg;}
+                    &:nth-of-type(2) {color: $bkg;}
+                    &:nth-of-type(3) {color: $codeC;}
+                    &:nth-of-type(4) {color: $bkg;}
+                    &:nth-of-type(5) {color: rgb(2, 134, 2);}
+                }
+            }
+            &:nth-of-type(7) {
+                padding-left: 2rem;
+                @media only screen and (min-width: 992px) {
+                    padding-left: 4rem;   
+                }
+                span.spanColor{
+                    //&:nth-of-type(1) {color: $codeA;}
+
+                    &:nth-of-type(1) {color: $bkg;}
+                    &:nth-of-type(3) {color: $codeD;}
+                }
+            }
+            &:nth-of-type(8) {
+                padding-left: 0;
+                span.spanColor{
+                    //&:nth-of-type(1) {color: $codeA;}
+                    //&:nth-of-type(2) {color: $codeA;}
+                    //&:nth-of-type(2) {color: $codeC;}
+
+                    &:nth-of-type(1) {color: $bkg;}
+                    &:nth-of-type(2) {color: $bkg;}
+                    &:nth-of-type(2) {color: $codeC;}
+                }
+            }
+            &:nth-of-type(9) {
+                margin-bottom: 2rem;
+                padding-left: 0;
+                span.spanColor{
+                    //&:nth-of-type(1) {color: $codeB;}
+                    //&:nth-of-type(3) {color: rgb(2, 134, 2);}
+
+                    &:nth-of-type(1) {color: $bkg;}
+                    &:nth-of-type(2) {color: $bkg;}
+                    &:nth-of-type(3) {color: rgb(2, 134, 2);}
+                }
+            }
+        }
+    }
+}

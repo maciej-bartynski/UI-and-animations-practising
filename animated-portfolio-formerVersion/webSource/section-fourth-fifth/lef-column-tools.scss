@@ -1,0 +1,279 @@
+#sectionToolsAndMaterials {
+    .section_left-side {
+        position: relative;
+        article.lampAndText {
+            @include flexbox($col, $fstart, $center);
+            width: 80%;
+            height: 0;
+            overflow: hidden;
+            background-color: $bkg3;
+            border-right: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            div {
+                position: relative;
+                @include flexbox($col, $center, $center);
+                width: 100%;
+                div.icona {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 60px; //border: $codeA solid 4px;
+                    background-color: $bkg2;
+                    position: relative;
+                    z-index: 2; //opacity: 0;
+                    &.powerToLightt {
+                        border: solid 2px $bkg3;
+                        animation: powerToLight 1000ms;
+                        animation-delay: 1000ms;
+                        animation-fill-mode: forwards;
+                    }
+                }
+                div.iconb {
+                    width: 0%;
+                    height: 4px;
+                    background-color: $codeC;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    margin-top: -2px;
+                    border: none;
+                    z-index: 1;
+                    &.powerToThis {
+                        animation: powerToHidden 1000ms;
+                        animation-fill-mode: forwards;
+                    }
+                }
+            }
+            p {
+                @include flexbox($col, $center, $center);
+                width: 100%;
+                span {
+                    width: 100%;
+                    color: $codeC;
+                    text-align: left;
+                    font-family: sans-serif;
+                    padding: 0.5rem;
+                }
+                span.titl {
+                    padding: 0;
+                    width: 100%;
+                    color: $codeC;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    letter-spacing: 0.1rem;
+                    text-align: center;
+                    font-family: sans-serif;
+                }
+            }
+            &.andPyk {
+                @media only screen and (min-width: 992px) {
+                    border: solid 6px $bkg2;
+                    border-right: none;
+                    animation: hiddenLabel 1000ms;
+                    animation-fill-mode: forwards;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+@keyframes hiddenLabel {
+    from {
+        height: auto;
+        overflow: hidden;
+        display: none;
+        opacity: 1;
+
+        border: solid 6px $bkg2;
+        border-right: none;
+    }
+    1% {
+        height: auto;
+        overflow: hidden;
+        display: none;
+        opacity: 1;
+
+        border: solid 6px $bkg2;
+        border-right: none;
+    }
+    25% {
+        height: auto;
+        overflow: hidden;
+        display: none;
+        opacity: 1;
+
+        border: solid 6px $bkg2;
+        border-right: none;
+    }
+    30% {
+        height: auto;
+        overflow: hidden;
+        display: none;
+        opacity: 0;
+
+        border: solid 6px $bkg2;
+        border-right: none;
+    }
+    35% {
+        height: auto;
+        overflow: hidden;
+        display: none;
+        opacity: 1;
+
+        border: solid 6px $bkg2;
+        border-right: none;
+    }
+    40% {
+        height: auto;
+        overflow: hidden;
+        display: none;
+        opacity: 0.7;
+
+        border: solid 6px $bkg2;
+        border-right: none;
+    }
+    90% {
+        height: auto;
+        overflow: auto;
+        display: flex;
+        opacity: 0.9;
+        border: solid 4px $bkg3;
+        border-right: none;
+    }
+    91% {
+        height: auto;
+        overflow: auto;
+        display: flex;
+        opacity: 0.9;
+        border: solid 4px $bkg;
+        border-right: none;
+    }
+    94% {
+        height: auto;
+        overflow: auto;
+        display: flex;
+        opacity: 0.9;
+        border: solid 4px $bkg3;
+        border-right: none;
+    }
+    95% {
+        height: auto;
+        overflow: auto;
+        display: flex;
+        opacity: 0.9;
+        border: solid 2px $bkg;
+        border-right: none;
+    }
+    to {
+        height: auto;
+        overflow: auto;
+        display: flex;
+        opacity: 1;
+        border: solid 6px $bkg2;
+        border-right: none;
+    }
+}
+
+@keyframes powerToHidden {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 50%;
+    }
+}
+
+@keyframes powerToLight {
+    from {
+        border: none; 
+    }
+    50% {
+        border: solid 2px $codeA;
+    }
+    75% {
+        border: none;
+    }
+    to {
+        border: solid 4px $codeC;
+    }
+}
+
+#sectionToolsAndMaterials {
+    .section_left-side {
+        h3 {
+            color: #0066ff;
+            font-family: sans-serif;
+            @include textShadow();
+            margin-bottom: 0.5rem;
+            @media only screen and (max-width: 991px) {
+                margin: 0.5rem 1rem 0 1rem;
+            }
+            width: 80%;
+            padding: 0.5rem;
+            text-align: left;
+            @media only screen and (max-width: 991px) {
+                width: 90%;
+            }
+        }
+        article.article-container {
+            width: 80%;
+            padding: 0.5rem;
+            @media only screen and (max-width: 991px) {
+                width: 90%;
+            }
+            border-top: solid 4px $codeC;
+            background-color: $bkg3;
+            p {
+                width: 100%;
+                font-size: 1rem;
+                color: $codeE;
+                padding: 0;
+                margin: 0;
+                font-family: sans-serif;
+                letter-spacing: 0.1rem;
+                @include textShadow();
+                @include flexbox($col, $fstart, $fstart);
+                span.artic {
+                    margin-top: 1rem;
+                    width: 100%;
+                }
+                span.background-marker {
+                    background-color: rgba(2, 134, 2, 0.2);
+                    color: $codeA;
+                    text-transform: none;
+                    border: none;
+                    padding: 0 6px 0 6px;
+                }
+                span.text-marker {
+                    color: $codeD;
+                    border: none;
+                    padding: none;
+                    text-transform: none;
+                }
+            }
+        }
+        span#btnForMobileUsers {
+            padding: 1rem;
+            margin: 2rem;
+            white-space: nowrap;
+            color: white;
+            border: solid 1px $codeC;
+            border-radius: 1rem;
+            background-color: $codeC;
+            @include shadow;
+            text-transform: uppercase;
+            text-align: center;
+            align-self: center;
+            @media only screen and (min-width: 768px) {
+                display: none;
+                width: 0;
+                height: 0;
+                padding: 0;
+                margin: 0;
+                overflow: hidden;
+            }
+        }
+    }
+}

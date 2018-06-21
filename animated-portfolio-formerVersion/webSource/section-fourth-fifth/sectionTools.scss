@@ -1,0 +1,17 @@
+#sectionToolsAndMaterials {
+    min-height: 100vh;
+    @include sectionRWD(column, flex-start, flex-start);
+    div.section_left-side {
+        padding-top: 130px;
+        @include leftColumnRWD($bkg2, $bkg2);
+        @include flexbox($col, $fstart, $center);
+    }
+    div.section_right-side {
+        @media only screen and (min-width: 992px){
+            padding-top: 130px;
+        }
+        min-height: 100vh;
+        @include rightColumnRWD($bkg3, $bkg3);
+        @include flexbox($col, $center, $fstart);
+    }
+}

@@ -1,0 +1,199 @@
+div.functionalRowOfTools{
+    @include flexbox ($row, $fstart, $center);
+    width:100%;
+    height: 110px;
+    @media only screen and (max-width: 767px) {
+        flex-wrap: wrap;
+        height: auto;
+    }
+    .verticalPowerLine{
+        @media only screen and (max-width: 767px) {
+            display: none;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+        @include flexbox ($col, $fstart, $center);
+        &.ffirst{
+            align-self: flex-start;
+        }
+        &.fsecond{
+            align-self: flex-end;
+        }     
+        height:57px;
+        width: 4px;
+        padding: 0;
+        margin: 0;
+        .vp{
+            background-color: $codeC;
+            height: 0;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            &.vpturnon{
+                animation: vpowerline linear 100ms;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+    .horizontalPowerLine{
+        @media only screen and (max-width: 767px) {
+            display: none;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+        @include flexbox ($row, $fstart, $center);
+        width:10%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        .hp{
+            background-color: $codeC;
+            height: 4px;
+            width: 0;
+            padding: 0;
+            margin: 0;
+            &.hpturnon{
+                animation: hpowerline linear 100ms;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+    &:nth-of-type(odd) .horizontalPowerLine {
+        @include flexbox ($row, $fend, $center);
+    }
+}
+
+div.classBelt {
+    @include flexbox ($row, $center, $center);
+    width: 300px;
+    height: 100px;
+    position: relative;
+    cursor: pointer;
+    &:hover{
+        background-color: rgba(0,102,255,0.7);
+    }
+    div.classSVGContainer {
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    div.classToolName {
+        width: 240px;
+        height: 70px;
+        border: 4px $bkg2 solid;
+        border-radius: 6px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -35px;
+        @include flexbox($row, $center, $center);
+        opacity: 0.3;
+        &.bturnon{
+            animation: bordersTurnOn linear 500ms;
+            animation-fill-mode: forwards;
+        }
+        span.classToolNameSpan {
+            color: $codeC;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            font-family: sans-serif;
+            text-align: right;
+            width: 90%;
+        }
+    }
+}
+
+.toolSVG {
+    width: 100px;
+    height: 100px;
+    background-color: $bkg3;
+    border-radius: 100px;
+    border: 2px $bkg2 solid;
+    opacity: 0.3;
+    &.bturnon{
+        animation: bordersTurnOn linear 500ms;
+        animation-fill-mode: forwards;
+    }
+    path {
+        stroke: $bkg3;
+        stroke-width: 1px;
+        fill:none;
+    }
+    polygon, circle, line, path, rect {
+        fill: $codeC;
+        &.ghub{
+            stroke: $codeC;
+            stroke-width: 3px;
+        }
+    }
+    polyline {
+        stroke: $codeC;
+        stroke-width: 4px;
+        fill:none;
+    }
+    ellipse{
+        &#AllowMeToIntroduceYouFiliKiliBalinDwalinOriNoriDoriBifurBofurBomburAndTheLiderOfOurCompanyThorinOakenShield{
+            fill:none;
+        }
+        &#elipsefirst{
+            fill:$codeC;
+        }
+    }
+}
+
+@keyframes vpowerline {
+    from{
+        height: 0;
+    }
+    to{
+        height: 100%;
+    }
+}
+
+@keyframes hpowerline {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes bordersTurnOn {
+    from{
+        border: $codeC 4px solid;
+        opacity: 1;
+    }
+    10%{
+        border: $bkg3 4px solid;
+        opacity: 0.7;
+    }
+    20%{
+        border: $bkg2 4px solid;
+        opacity: 0.5;
+    }
+    30%{
+        border: $bkg3 4px solid;
+        opacity: 0.7;
+    }
+    40%{
+        border: $bkg2 4px solid;
+        opacity: 0.4;
+    }
+    60%{
+        border: $bkg3 4px solid;
+        opacity: 0.8;
+    }
+    70%{
+        border: $bkg2 4px solid;
+        opacity: 0.3;
+    }
+    to{
+        border: $codeC 4px solid;
+        opacity: 1;
+    }
+}

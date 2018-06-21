@@ -1,0 +1,209 @@
+@-webkit-keyframes axPointFromLeftToRight {
+    0% {
+        right: 100%;
+    }
+    100% {
+        right: 16px;
+    }
+}
+
+@-moz-keyframes axPointFromLeftToRight {
+    0% {
+        right: 100%;
+    }
+    100% {
+        right: 16px;
+    }
+}
+
+@-o-keyframes axPointFromLeftToRight {
+    0% {
+        right: 100%;
+    }
+    100% {
+        right: 16px;
+    }
+}
+
+@keyframes axPointFromLeftToRight {
+    from {
+        opacity: 1;
+        right: 100%;
+        width: 2px;
+        height: 2px;
+        margin-top: -6px;
+    }
+    to {
+        opacity: 1;
+        right: 16px;
+        width: 26px;
+        height: 26px;
+        margin-top: -13px;
+    }
+}
+
+@-webkit-keyframes topAndBottomStringFromRihtToLeft {
+    0% {
+        opacity: 1;
+        width: 0;
+        margin-bottom: 1rem;
+        letter-spacing: 1rem;
+    }
+    100% {
+        opacity: 1;
+        width: 100%;
+        margin-bottom: 0;
+        letter-spacing: 0.1rem;
+    }
+}
+
+@-moz-keyframes topAndBottomStringFromRihtToLeft {
+    0% {
+        opacity: 1;
+        width: 0;
+        margin-bottom: 1rem;
+        letter-spacing: 1rem;
+    }
+    100% {
+        opacity: 1;
+        width: 100%;
+        margin-bottom: 0;
+        letter-spacing: 0.1rem;
+    }
+}
+
+@-o-keyframes topAndBottomStringFromRihtToLeft {
+    0% {
+        opacity: 1;
+        width: 0;
+        margin-bottom: 1rem;
+        letter-spacing: 1rem;
+    }
+    100% {
+        opacity: 1;
+        width: 100%;
+        margin-bottom: 0;
+        letter-spacing: 0.1rem;
+    }
+}
+
+@keyframes topAndBottomStringFromRihtToLeft {
+    from {
+        opacity: 1;
+        width: 0;
+        margin-bottom: 1rem;
+        letter-spacing: 1rem;
+    }
+    to {
+        opacity: 1;
+        width: 100%;
+        margin-bottom: 0;
+        letter-spacing: 0.1rem;
+    }
+}
+
+@-webkit-keyframes bottomStringFromHiddenToVisible {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes bottomStringFromHiddenToVisible {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes bottomStringFromHiddenToVisible {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes bottomStringFromHiddenToVisible {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes btnsFromHiddenToVisible {
+    from {
+        opacity: 0;
+    }
+    25% {
+        opacity:1;
+    }
+    50%{
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes spinner {
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate-direction {
+    animation: spinner;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+.rotate-oposite-direction {
+    animation: spinner;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+}
+
+@keyframes clockMainSpin {
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(1080deg);
+    }
+}
+@keyframes clockLesserSpin {
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.clockSpinner{
+    animation: clockMainSpin;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.clockPointerSpinner{
+    animation: clockLesserSpin;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}

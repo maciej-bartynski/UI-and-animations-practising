@@ -1,0 +1,299 @@
+main {
+    width: 100%;
+    @include flexbox($col, $fstart, $center);
+}
+
+#whatsapp-project {
+    min-height: 95vh;
+    @include sectionRWD();
+    div.section_left-side {
+        @include leftColumnRWD($bkg2, $bkg2);
+        @include flexbox($col, $fstart, $center);
+        padding-bottom: 2rem;
+    }
+    div.section_right-side {
+        min-height: 95vh;
+        @include rightColumnRWD($bkg3, $bkg3);
+        @include flexbox($col, $fstart, $center);
+        padding-bottom: 10rem;
+    }
+}
+
+div.section_right-side {
+    #btnFromDescriptToApp {
+        width: 90%;
+        padding: 1rem 0 1rem 0;
+        position: absolute;
+        bottom: 0;
+        left: 5%;
+        background-color: $codeA;
+        border-radius: 3px;
+        @include shadow();
+        @include flexbox($row, $center, $center);
+        @media only screen and (min-width: 992px) {
+            bottom: -1%;
+            left: -1%;
+        }
+        &:hover {
+            background-color: $bkg2;
+            cursor: pointer;
+            @include hoverShadow();
+            border: 1px $bkg solid;
+            span {
+                color: $bkg;
+            }
+        }
+        &:active {
+            background-color: $bkg2;
+            cursor: pointer;
+            @include activeShadow();
+        }
+        span {
+            width: 100%;
+            color: $bkg3;
+            @include textShadow();
+            font-family: sans-serif;
+            text-transform: capitalize;
+            letter-spacing: 0.1rem;
+            text-align: center;
+        }
+    }
+}
+
+#whatsapp-project {
+    .section_left-side {
+        .whatsapp-project_title-positioner {
+            width: 100%;
+        }
+        h2,
+        h3 {
+            color: #0066ff;
+            font-family: sans-serif;
+            @include textShadow();
+            width: 100%;
+        }
+        h2 {
+            padding: 0 1rem 0 2rem;
+            margin-top: 100px;
+        }
+        h3 {
+            padding: 0 1rem 0 3rem;
+            margin-bottom: 0.5rem;
+        }
+        article.article-container {
+            overflow-y: scroll;
+            height: 70vh;
+            padding: 0.5rem;
+            margin: 0 0.5rem 0 0.5rem;
+            @media only screen and (min-width: 992px){
+                margin: 0 1.5rem 0 1.5rem;
+            }
+            @media only screen and (min-width: 1200px){
+                margin: 0 3rem 0 3rem;
+            }
+            border-top: solid 4px $codeC;
+            background-color: $bkg3;
+            p {
+                width: 100%;
+                font-size: 1rem;
+                color: $codeE;
+                padding: 0;
+                margin: 0;
+                font-family: sans-serif;
+                //letter-spacing: 0.1rem;
+                @include textShadow();
+                @include flexbox($col, $fstart, $fstart);
+                span.artic {
+                    width: 100%;
+                    line-height: 1.5rem;
+                }
+                span.background-marker {
+                    background-color: rgba(2, 134, 2, 0.3);
+                    color: $codeC;
+                    color: red;
+                    text-transform: none;
+                    border: none;
+                    padding: 0 6px 0 6px;
+                    letter-spacing: 0.2rem;
+                    font-weight: bold;
+                }
+                span.text-marker {
+                    color: $codeD;
+                    border: none;
+                    padding: none;
+                    text-transform: none;
+                }
+                span.text-red {
+                    color: red;
+                }
+                span.text-blue {
+                    color: blue;
+                }
+                span.text-green {
+                    color: $codeE;
+                }
+                span.background-mark {
+                    background-color: white;
+                    color: black;
+                    text-transform: none;
+                    border: none;
+                    padding: 0 6px 0 6px;
+                }
+            }
+        }
+    }
+    .section_right-side {
+        position: relative;
+        .insider-positioner-beautifier {
+            width: 100%;
+            height: 1rem;
+            @media only screen and (min-width: 992px) {
+                height: 10rem;
+            }
+        }
+        .section_right-side_stats-positioner {
+            width: 90%;
+            @include flexbox($row, $center, $center);
+            @media only screen and (min-width: 992px) {
+                @include flexbox($row, $center, stretch);
+                min-height: 10rem;
+            }
+            flex-wrap: wrap;
+            .stats {
+                margin: 1.5%;
+                padding: 1rem;
+                width: 90%;
+                border-radius: 3px;
+                @include flexbox($col, $fstart, $center);
+                @media only screen and (min-width: 992px) {
+                    width: 27%;
+                }
+                .stats_stats-presentation {
+                    @include flexbox($row, $center, $center);
+                    width: 90%;
+                    margin-bottom: 2rem;
+                    div#iplusplus {
+                        @include flexbox($row, $center, $center);
+                        width: 40px;
+                        height: 40px;
+                        margin-right: 1rem;
+                        color: white;
+                        font-family: sans-serif;
+                        font-weight: bold;
+                        font-size: 0.7rem;
+                        border-radius: 20px;
+                        @include flexbox($col, $center, $center);
+                        &.a {
+                            background-color: rgb(205, 0, 0);
+                            &.animaPlu {
+                                animation: plusP 200ms;
+                                animation-iteration-count: infinite;
+                            }
+                        }
+                        &.b {
+                            background-color: $codeA;
+                            &.animaPlu {
+                                animation: plusP 200ms;
+                                animation-iteration-count: infinite;
+                            }
+                        }
+                        &.c {
+                            background-color: $codeE;
+                            &.animaPlu {
+                                animation: plusP 200ms;
+                                animation-iteration-count: infinite;
+                            }
+                        }
+                        &.d {
+                            background-color: $codeD;
+                            &.animaPlu {
+                                animation: plusP 200ms;
+                                animation-iteration-count: infinite;
+                            }
+                        }
+                        &.e {
+                            background-color: red;
+                            &.animaPlu {
+                                animation: plusP 200ms;
+                                animation-iteration-count: infinite;
+                            }
+                        }
+                        &.f {
+                            background-color: $codeD;
+                            &.animaPlu {
+                                animation: plusP 200ms;
+                                animation-iteration-count: infinite;
+                            }
+                        }
+                    }
+                    span {
+                        color: $codeA;
+                        text-transform: uppercase;
+                        letter-spacing: 0.1rem;
+                        font-family: sans-serif;
+                        font-size: 1.2rem;
+                        @include textShadow();
+                        text-align: center;
+                        width: auto;
+                    }
+                }
+                span {
+                    text-align: center;
+                    color: $codeC;
+                    text-transform: uppercase;
+                    letter-spacing: 0.1rem;
+                    font-family: sans-serif;
+                    font-size: 1rem;
+                    @include textShadow();
+                    width: 100%;
+                }
+                &.growingShadowAnimation {
+                    animation: growingShadow 3s;
+                    animation-fill-mode: forwards;
+                    &:nth-of-type(1) {
+                        animation-delay: 100ms;
+                    }
+                    &:nth-of-type(2) {
+                        animation-delay: 550ms;
+                    }
+                    &:nth-of-type(3) {
+                        animation-delay: 1100ms;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes plusP {
+    from {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes growingShadow {
+    from {
+        -webkit-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.75);
+        background-color: $bkg3;
+    }
+    50% {
+        -webkit-box-shadow: 0px 7px 7px 3px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 7px 7px 3px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 7px 7px 3px rgba(0, 0, 0, 0.75);
+        background-color: $bkg;
+    }
+    to {
+        -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.75);
+        background-color: $bkg2;
+    }
+}

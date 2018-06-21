@@ -1,0 +1,213 @@
+.toggleBarsFirst,
+    {
+    @include flexbox($row, $center, $fstart);
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+.toggleBarsFirst .toggleBars_container,
+    {
+    @include flexbox($col, $fstart, $center);
+    width: 100%;
+    min-height: 7rem;
+    margin-bottom: 1rem;
+    @media screen and (min-width: 992px){
+        width: 33.33%;
+        margin-bottom: 1.5rem;   
+    }
+}
+
+.toggleBarsFirst .toggleBars_container,
+    {
+    .toggle-row {
+        width: 100%;
+        &:nth-of-type(1) {
+            @include flexbox($row, $fstart, $center);
+            div.singleToggleBar {
+                width: 100px;
+                height: 26px;
+                border: solid 3px $bkg;
+                //background-color: $bkg;
+                border-radius: 30px;
+                position: relative;
+                cursor: pointer;
+                div {
+                    width: 20px;
+                    height: 20px;
+                    background-color: $bkg3;
+                    border-radius: 30px;
+                    position: absolute;
+                    top: 50%;
+                    right: 70px;
+                    margin-top: -10px;
+                    &.click-pointer {
+                        animation: clickOnToggleBarPointer 2500ms ease ;
+                        animation-fill-mode: forwards;
+                    }
+                    &.clickB-pointer {
+                        animation: clickBOnToggleBarPointer 2500ms ease ;
+                        animation-fill-mode: forwards;
+                    }
+                }
+                &.click-bar-pointer {
+                    animation: clickOnToggleBarBar 2500ms ease;
+                    animation-fill-mode: forwards;
+                }
+                &.clickB-bar-pointer {
+                    animation: clickBOnToggleBarBar 2500ms ease;
+                    animation-fill-mode: forwards;
+                }
+            }
+            span {
+                color: $bkg;
+                @include textShadow();
+                font-weight: bold;
+                text-transform: capitalize;
+                letter-spacing: 0.1rem;
+                width: 70%;
+                padding-left: 5%;
+                text-align: left;
+                font-family: sans-serif;
+                opacity: 0;
+                font-size: 1.2rem;
+            }
+        }
+        &:nth-of-type(2) {
+            @include flexbox($row, $fend, $center)
+        }
+    }
+    .description-row {
+        width: 100%;
+        padding-left:150px;
+        opacity: 0;
+        @include flexbox ($col, $fstart, $fstart);
+        @media screen and (min-width: 992px){
+            padding-left: 40%;  
+        }
+        span {
+            font-size: 1rem;
+            @include textShadow();
+            width: 100%;
+            color: $codeC;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+            &.onetab{
+                padding-left: 1rem;
+            }
+            &.twotab{
+                padding-left: 2rem;
+            }
+            &.threetab{
+                padding-left: 3rem;
+            }
+            &.colorA{
+                color: $codeA;
+            }
+            &.colorB{
+                color: $codeB;
+            }
+            &.colorC{
+                color: $codeC;
+            }
+            &.colorD{
+                color: $codeD;
+            }
+            &.colorE{
+                color: $codeE;
+            }
+        }
+    }
+}
+
+.singleTogglePointerAnim {
+    animation: togglePointerFromLeftToRight 1s ease;
+    animation-fill-mode: forwards;
+}
+
+.singleToggleBarAnim {
+    animation: togglePointerFromGrayToColor 1s ease;
+    animation-fill-mode: forwards;
+}
+
+.description-rowAnim,
+.toggle-row span.anim {
+    animation: titleFromHiddenToEnabled 1s;
+    animation-fill-mode: forwards;
+}
+
+.toggleBarsFirst {
+    .toggleBars_container {
+        &:nth-of-type(1) {
+            .toggle-row {
+                .singleToggleBar,
+                .singleTogglePointer,
+                span {
+                    animation-delay: 50ms;
+                }
+            }
+            .description-row {
+                animation-delay: 50ms;
+            }
+        }
+        &:nth-of-type(2) {
+            .toggle-row {
+                .singleToggleBar,
+                .singleTogglePointer,
+                span {
+                    animation-delay: 450ms;
+                }
+            }
+            .description-row {
+                animation-delay: 450ms;
+            }
+        }
+        &:nth-of-type(3) {
+            .toggle-row {
+                .singleToggleBar,
+                .singleTogglePointer,
+                span {
+                    animation-delay: 850ms;
+                }
+            }
+            .description-row {
+                animation-delay: 850ms;
+            }
+        }
+        &:nth-of-type(4) {
+            .toggle-row {
+                .singleToggleBar,
+                .singleTogglePointer,
+                span {
+                    animation-delay: 1250ms;
+                }
+            }
+            .description-row {
+                animation-delay: 1250ms;
+            }
+        }
+        &:nth-of-type(5) {
+            .toggle-row {
+                .singleToggleBar,
+                .singleTogglePointer,
+                span {
+                    animation-delay: 1650ms;
+                }
+            }
+            .description-row {
+                animation-delay: 1650ms;
+            }
+        }
+        &:nth-of-type(6) {
+            .toggle-row {
+                .singleToggleBar,
+                .singleTogglePointer,
+                span {
+                    animation-delay: 2050ms;
+                }
+            }
+            .description-row {
+                animation-delay: 2050ms;
+            }
+        }
+    }
+}

@@ -1,0 +1,7 @@
+.left-column{
+    width: 30%;
+    height: 297mm;
+    background-color: $brandcolor;
+    @include column($fstart, $center);
+    padding: 1rem;
+}

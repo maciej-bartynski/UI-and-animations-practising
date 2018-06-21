@@ -1,0 +1,19 @@
+'use strict';
+import './header/variables.scss';
+import './header/mixins.scss';
+import './header/nav.scss';
+
+import './right-column/titles.scss';
+import './right-column/ax.scss';
+import './right-column/animations.scss';
+import './right-column/toggleBars.scss';
+import './right-column/toggleAnimation.scss';
+import './right-column/ax-description.scss';
+import './left-column/left-column.scss';
+import './hidden-screen/hidden-screen.scss';
+import './header/dynamic-selfintroduction.js';
+import './header/header.js';
+import './right-column/right-column.js';
+import './left-column/dynamic-text.js';
+import './right-column/synchonize-animations.js';
+import './hidden-screen/hidden-screen.js';

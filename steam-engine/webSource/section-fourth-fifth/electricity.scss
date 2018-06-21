@@ -1,0 +1,473 @@
+.turnOnPositioner{
+    border-top: solid 4px $codeC;
+    min-width: 768px;
+    height: 32px;
+    @media only screen and (max-width: 767px) {
+        display: none;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+    span{
+        color: $codeC;
+        font-family: sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    width: 100%;
+    @include flexbox ($row, $fstart, $fend);
+    .turning-on-positioner{
+        align-self: flex-end;
+        border-bottom: solid 4px $codeC;
+        width: 32px;
+        height: 32px;
+        @include flexbox ($row, $center, $center);
+        .turning-on-cog{
+            line{
+                stroke: $codeC;
+                stroke-width: 3px;
+            }
+            circle{
+                fill: $codeC;
+            }
+            
+        }
+        &.press{
+            animation: starterCog 2000ms;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+        }
+    }
+    .turnOnBtn{
+        box-sizing: border-box;
+        overflow: hidden;
+        @include flexbox ($row, $center, $center);
+        width: 30px;
+        height: 30px;
+        background-color: $codeC;
+        border: $codeC solid 1px;
+        border-radius: 30px;
+        cursor: pointer;
+        &.beforeIsPressed{
+            animation: beforePressed 1s;
+            animation-iteration-count: infinite;
+        }
+        .lineOnOff{
+            @include flexbox ($row, $center, $fend);
+            height: 70%;
+            width: 15%;
+            background-color: white;
+        }
+        &.press{
+            animation: starterButton 2000ms;
+            animation-fill-mode: forwards;
+            animation-timing-function: linear;
+        }
+    }
+}
+@keyframes beforePressed {
+    from{  
+        box-sizing: border-box;
+        width: 30px;
+        height: 30px;
+        background-color: $codeC;
+        border: $codeC solid 1px;
+        border-radius: 30px;
+        -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+    }
+    50%{
+        box-sizing: border-box;
+        width: 31px;
+        height: 31px;
+        background-color: red;
+        border: white solid 1px;
+        border-radius: 31px; 
+        -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.65);
+        -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.65);
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.65);
+    }
+    to{
+        box-sizing: border-box;
+        width: 30px;
+        height: 30px;
+        background-color: $codeC;
+        border: $codeC solid 1px;
+        border-radius: 30px;
+        -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+    }
+}
+@keyframes starterButton{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-90deg);
+    }
+}
+@keyframes starterCog{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+.electricityRowOfEvices {
+    @media only screen and (max-width: 767px) {
+        display: none;
+        width: 0;
+        height: 0;
+        overflow: hidden;
+    }
+    @include flexbox ($row, $fstart, $center);
+    width:100%;
+    height: 110px;
+    flex-wrap: nowrap;
+    .vp-between {
+        @media only screen and (max-width: 767px) {
+            display: none;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+        @include flexbox ($col, $fstart, $center);
+        width: 4px;
+        height: 57px;
+        padding: 0;
+        margin: 0;
+        &.vp-first{
+            align-self: flex-start;
+        }
+        &.vp-second{
+            align-self: flex-end;
+        }
+        .inside{
+            width: 100%;
+            height: 0%;
+            background-color: $codeC;
+            &.animateThisElement{
+                animation: animateThisElement 100ms;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+    .hp-between {
+        @media only screen and (max-width: 767px) {
+            display: none;
+            width: 0;
+            height: 0;
+            overflow: hidden;
+        }
+        @include flexbox ($row, $fstart, $center);
+        &.hp-first{
+            width: 30%;
+        }
+        &.hp-second{
+            width: 60px;
+        }
+        height: 4px;
+        padding: 0;
+        margin: 0;
+        .inside {
+            width: 0;
+            height: 100%;
+            background-color: $codeC;
+            &.animateThisElement{
+                animation: animateThisHorizontalElement 100ms;
+                animation-fill-mode: forwards;
+            }  
+        }
+    }
+    .elementRectangular{
+        opacity: 0;
+        @include flexbox ($row, $fstart, $center);
+        width: 140px;
+        height: 40px; 
+        border: 4px $codeC solid;
+        border-radius: 3px;
+        .elementRectangularSVG {
+            width: 100%;
+            height: 100%;
+            path {
+                stroke-width: 4px;
+                stroke: $codeC;
+                fill: none;
+            }
+        }
+        &.animateThisElement{
+            animation: hotResistor 2000ms;
+            animation-fill-mode: forwards;
+        }
+    }
+    .elementSteamEngine {
+        opacity: 0;
+        @include flexbox ($row, $fstart, $center);
+        width: 100px;
+        height: 40px; 
+        border: 4px $codeC solid;
+        border-radius: 3px;
+        position: relative;
+        .maincogsteam{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 32px;
+            height: 32px;
+            &.animateThisElement{
+            animation: cicleMovement 500ms;
+            animation-iteration-count: infinite;
+            }
+            #big{
+                stroke-width: 4px;
+                stroke: $codeC;
+                fill: $bkg2;
+            }
+            #small{
+                stroke-width: 1px;
+                stroke: $codeC;
+                fill: $codeC;
+            }
+        }
+        .mainbox{
+            width: 35%;
+            height: 100%;
+            background-color: $codeC;
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+        }
+        .maincorb{
+            width: 15%;
+            height: 4px;
+            background-color: $codeC;
+            position: relative;
+            &.animateThisElement{
+            animation: mainCorbMovement 500ms;
+            animation-iteration-count: infinite;
+            }
+        }
+        .lesserbox{
+            width: 25%;
+            height: 100%;
+            background-color: $codeC;
+            position: absolute;
+            top:0;
+            left:45%;
+            border-radius: 3px;
+        }
+        .lessercorb{
+            width: 30%;
+            height: 4px;
+            position: relative;
+            background-color: $codeC;
+            &.animateThisElement{
+                animation: lesserMovement 500ms;
+                animation-iteration-count: infinite;
+            }
+            
+        }
+        .frontier{
+            width: 5%;
+            height: 100%;
+            background-color: $codeC;
+            position: relative;
+            &.animateThisElement{
+               animation: lesserMovement 500ms;
+               animation-iteration-count: infinite;
+            }
+        }
+        &.animateThisElement{
+            animation: engineOpacity 500ms;
+            animation-fill-mode: forwards;
+        }
+
+    }
+    .track {
+        opacity: 0;
+        width: 280px;
+        height: 10px;
+        border: solid 3px $codeC;
+        .filledtrack{
+            background-color: $codeC;
+            height: 100%;
+            width: 0;
+            &.animateThisElement{
+            animation: fillTheTrack 2000ms;
+            animation-fill-mode: forwards;
+            }
+        }
+        &.animateThisElement{
+            animation: engineOpacity 500ms;
+            animation-fill-mode: forwards;
+        }
+    }
+    .spherestation{
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+        border: 3px $codeC solid;
+        background-color: $codeC;
+        opacity: 0;
+        &.animateThisElement{
+        animation: spheran 3000ms;
+        animation-fill-mode: forwards;
+        }
+        &.onshow{
+            opacity: 1;
+        }
+    }
+}
+
+@keyframes animateThisElement {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes animateThisHorizontalElement {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes hotResistor {
+    from {
+        border: solid 4px red;
+        opacity: 1;
+    }
+    5%{
+        border: solid 4px red;
+        opacity: 0;
+    }
+    15%{
+        border: solid 4px red;
+        opacity: 1;
+    }
+    25%{
+        border: solid 4px red;
+        opacity: 0.2;
+    }
+    50%{
+        border: solid 4px $codeC;
+        opacity: 1;
+    }
+    80%{
+        border: solid 4px $codeC;
+        opacity: 0.1;
+    }
+    to{
+        border: solid 4px $codeC;
+        opacity: 1;
+    }
+}
+
+@keyframes engineOpacity {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes spheran {
+    from{
+        opacity: 0;
+    }
+    70%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fillTheTrack{
+    0% {
+        width: 0;
+    }
+    10%{
+        width: 0;
+    }
+    20%{
+        width: 30%
+    }
+    25%{
+        width: 10%
+    }
+    35%{
+        width: 40%;
+    }
+    40%{
+        width: 15%;
+    }
+    70%{
+        width: 50%;
+    }
+    75%{
+        width: 20%;
+    }
+    85%{
+        width: 60%;
+    }
+    90%{
+        width: 50%;
+    }
+    95% {
+        width: 80%;
+    }
+    96%{
+        width: 77%;
+    }
+    100%{
+        width: 280px;
+    }
+}
+
+@keyframes mainCorbMovement {
+    from {
+        position: relative;
+        top: 35%;
+    }
+    50%{
+        position: relative;
+        top: -35%;
+    }
+    to {
+        position: relative;
+        top: 35%;
+    }
+}
+
+@keyframes lesserMovement {
+    from {
+        position: relative;
+        left: 0;
+    }
+    50%{
+        position: relative;
+        left: 10%;
+    }
+    to {
+        position: relative;
+        left: 0;
+    }
+}
+
+@keyframes cicleMovement {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

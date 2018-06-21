@@ -1,0 +1,125 @@
+div.section_right-side_ax-title,
+div.section_right-side_toggles-title {
+    width: 90%;
+    @include flexbox ($row, $fstart, $center);
+    h1 {
+        color: $bkg;
+        font-family: sans-serif;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+        text-align: left;
+        margin-top: 0;
+        margin-bottom: 0;
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+}
+
+div.section_right-side_toggles-title {
+    margin-bottom: 4rem;
+    margin-top: 3rem;
+    @media only screen and (min-width: 992px) {
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+}
+
+div.section_right-side_ax-title {
+    margin-bottom: 4rem;
+    margin-top: 3rem;
+    @media only screen and (min-width: 992px) {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+}
+
+.svg-positioner {
+    @include flexbox ($row, $fstart, $fstart);
+    margin-right: 1rem;
+    svg polygon {
+        fill: $bkg;
+    }
+    svg line {
+        stroke: $bkg;
+        stroke-width: 10;
+    }
+    svg circle {
+        &:nth-of-type(1) {
+            fill: $bkg;
+        }
+        &:nth-of-type(2) {
+            fill: $bkg3;
+        }
+        &:nth-of-type(3) {
+            fill: $bkg;
+        }
+    }
+    svg.small-cog line {
+        stroke: $bkg;
+        stroke-width: 4;
+    }
+}
+
+.svg-ax-positioner {
+    @include flexbox($row, $fstart, $center);
+    position: relative;
+    .svg-ax-clock {
+        z-index: 2;
+        circle {
+            &:nth-of-type(1) {
+                stroke: $bkg3;
+                stroke-width: 2;
+                fill: $bkg;
+            }
+            &:nth-of-type(2) {
+                stroke: $bkg3;
+                stroke-width: 2;
+                fill: $bkg3;
+            }
+            &:nth-of-type(3){
+                fill: none;
+                stroke-width: 2;
+                stroke: $bkg;
+            }
+        }
+        polygon {
+            fill: $bkg3
+        }
+    }
+    .svg-clock-pointer {
+        z-index: 3;
+        position: absolute;
+        top: 0;
+        left: 0;
+        polygon {
+            fill: $bkg3;
+        }
+    }
+    .clock-small-cog{
+        position: relative;
+        left: -25px;
+        transition: left 300ms;
+        z-index: 1;
+        &.clockCogPosition{
+            left: -5px;
+        }
+        line{
+            stroke: $bkg;
+            stroke-width: 4;
+        }
+        circle {
+            &:nth-last-of-type(1){
+                fill: $bkg;
+            }
+            &:nth-last-of-type(2){
+                fill:$bkg3;
+            }
+            &:nth-last-of-type(3){
+                fill:$bkg;
+            }
+        }
+    }
+}
+
+
+
+

@@ -1,0 +1,41 @@
+div.section_left-side {
+    width: 100%;
+    #magictext {
+        width: 100%;
+        @include flexbox($col, $fstart, $center);
+        span.spanLine {
+            width: 90%;
+            color: $bkg;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1rem;
+            word-wrap: break-word;
+            word-break: break-word;
+            padding-top: 0.4rem;
+            padding-bottom: 0.4rem;
+            font-weight: bold;
+            border-bottom: $backB 1px solid;
+            @include flexbox ($row, $fstart, $center);
+            .positionNumber{
+                padding: 0;
+                margin: 0;
+                margin-right: 3rem;
+                color: $backB;
+                @media only screen and (max-width: 800px){
+                    margin-right: 1rem;
+                }
+            }
+            .positionNumber.edge{
+                margin-right: 1rem; 
+            }
+            span.spanColor {
+                padding: 0;
+                margin: 0;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+                color: white;
+            }
+            #selfintroA, #selfintroB, #selfintroC, #selfintroD {
+                color: $backH;
+            }
+        }
+    }
+}

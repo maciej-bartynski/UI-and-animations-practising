@@ -1,0 +1,77 @@
+.left-column aside {
+    @include column($fstart, $center);
+    width: 100%;
+    .left-column_contact{
+        @include column($fstart, $center);
+        width: 100%;
+        .left-column_contact_item {
+            @include row($fstart, $center);
+            width: 100%;
+            margin: 1rem 0 0 0;
+            svg {
+                width: 30px;
+                height: 30px;
+                background-color: white;
+                border-radius: 30px;
+                margin-right: 1rem;
+            }
+            span {
+                font-family: sans-serif;
+                font-weight: 100;
+                color: $secondcolor;
+                font-size: 0.7rem;
+                text-align: left; 
+            } 
+        }
+    }
+    .left-column_article{
+        @include column($fstart, $center);
+        width: 100%;
+        &.about-me{
+            min-height: 400px;
+        }
+        .left-column_article_head{
+            @include row($fstart, $center);
+            width: 100%;
+            margin: 1rem 0 0 0;
+            svg {
+                width: 30px;
+                height: 30px;
+                background-color: white;
+                border-radius: 30px;
+                margin-right: 1rem;
+            }
+            h2 {
+                font-family: sans-serif;
+                font-weight: 100;
+                color: $secondcolor;
+                font-size: 1.1rem;
+                text-align: left;
+                text-transform: uppercase;
+                .strong{
+                    font-weight: bold;
+                }
+            } 
+        }
+        p {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            font-weight: 100;
+            color: $secondcolor;
+            font-size: 0.8rem;
+            line-height: 1.2rem;
+            text-align: left; 
+            width: 100%;
+            .strong{
+                font-weight: 700;
+            }
+        }
+    }
+    .left-column_article.about-me{
+        svg {
+            border-radius: 0;
+            background-color: $brandcolor;    
+        }
+    }
+}
